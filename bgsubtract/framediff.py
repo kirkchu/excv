@@ -13,7 +13,7 @@ while True:
     diff = cv2.threshold(diff, 30, 255, cv2.THRESH_BINARY)[1]
     diff = cv2.erode(diff, None, iterations=2)
     diff = cv2.dilate(diff, None, iterations=2)
-    cv2.imshow('test', diff)
+    #cv2.imshow('test', diff)
 
     cnts, hierarchy = cv2.findContours(
         diff, 
@@ -28,6 +28,7 @@ while True:
         cv2.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 2)
 
     cv2.imshow("frame", frame)
+
     if cv2.waitKey(100) == 27:
         cv2.destroyAllWindows()
         break
