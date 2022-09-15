@@ -6,9 +6,9 @@ ap.add_argument('-i', '--image', required=True,
 args = vars(ap.parse_args())
 
 gray = cv2.imread(args['image'], 0)
-#feature = cv2.xfeatures2d.SIFT_create()
+feature = cv2.xfeatures2d.SIFT_create()
 #feature = cv2.xfeatures2d.SURF_create()
-feature = cv2.ORB_create(30)
+#feature = cv2.ORB_create()
 
 kp = feature.detect(gray)
 #print(kp)
