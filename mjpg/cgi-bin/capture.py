@@ -7,6 +7,9 @@ time.sleep(1)
 ret, image = cap.read()
 cv2.imwrite('output.jpg', image)
 
+print('content-type: text/html')
+print()
+
 print('''
 <html>
 <body>
