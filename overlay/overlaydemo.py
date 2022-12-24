@@ -21,7 +21,7 @@ def overlay(original, overlay):
     return cv2.add(overlay_out, original_out)
     
 original_image = cv2.imread('original.jpg')
-overlay_image = cv2.imread('overlay.jpg', -1)
+overlay_image = cv2.imread('overlay.png', -1)
 newsize = (original_image.shape[1], original_image.shape[0])
 overlay_image = cv2.resize(overlay_image, newsize)
 

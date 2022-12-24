@@ -23,7 +23,7 @@ def nnProcess(image, model):
     return classes, confs, boxes
 
 def drawBox(image, classes, confs, boxes, names, colors):
-    new_image = image.copy()
+    new_image = image#.copy()
     for (classid, conf, box) in zip(classes, confs, boxes):
         x, y, w , h = box 
         label = '{}: {:.2f}'.format(names[int(classid)], float(conf))
@@ -34,7 +34,7 @@ def drawBox(image, classes, confs, boxes, names, colors):
         )
     return new_image
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
